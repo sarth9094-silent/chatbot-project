@@ -64,7 +64,7 @@ def chat():
             title_prompt = f"Give a short 3-4 word title: {user_message}"
 
             response = client.chat.completions.create(
-                model="openrouter/auto",
+                model="openai/gpt-3.5-turbo",
                 messages=[{"role": "system", "content": "You are a helpful assistant."}]
             )
             title = response.choices[0].message.content.strip()
